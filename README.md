@@ -1,7 +1,10 @@
 # IRIS FLOWER PREDICTION 
 <img src ="iris.jpg">
 
+
+
 ## Project Overview
+<img src ="image.png">
 This repository contains a machine learning project developed using Python, focusing on predictive modeling with Logistic Regression. The project achieved 100% accuracy, demonstrating the effectiveness of the implemented approach.
 
 ## Tech Stack
