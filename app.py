@@ -4,14 +4,19 @@ import pickle
 import pandas as pd
 
 
-# Load the saved model
-with open('C:/Iris app/iris_logistic_regression_model (2).pkl', 'rb') as file:
-    model = pickle.load(file)
+import os
 
-    # Loadinf the datasets
-    # df=pd.read_csv("C:\Iris app\Iris.csv")
-    # df.sample(5)
-    # st.write(df.sample(5))
+file_path = 'C:/Iris app/iris_logistic_regression_model (2).pkl'
+if os.path.exists(file_path):
+    with open(file_path, 'rb') as file:
+        model = pickle.load(file)
+else:
+    print(f"File not found at {file_path}. Please check the path and try again.")
+
+    ## Loading  the datasets
+    df=pd.read_csv("C:\Iris app\Iris.csv")
+    df.sample(5)
+    st.write(df.sample(5))
 
 def main():
 # Streamlit app
