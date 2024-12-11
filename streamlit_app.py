@@ -14,7 +14,7 @@ else:
     print(f"File not found at {file_path}. Please check the path and try again.")
 
     ## Loading  the datasets
-    df=pd.read_csv("C:\Iris app\Iris.csv")
+    df=pd.read_csv("Iris.csv")
     df.sample(5)
     st.write(df.sample(5))
 
