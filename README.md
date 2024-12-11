@@ -56,6 +56,9 @@ pip install -r requirements.txt
 ```
 
 ## Model Performance
+<img src ="iris.png">
+<img src ="Screenshot 2024-12-11 202249.png">
+
 - **Algorithm:** Logistic Regression
 - **Accuracy:** 100%
 - **Key Metrics:** Precision, Recall, F1-Score (details in notebooks)
@@ -71,7 +74,7 @@ Open the Jupyter Notebooks to explore data analysis and model development:
 ### Streamlit Web Application
 Launch the interactive web app:
 ```bash
-streamlit run app.py
+streamlit run streamlit_ap.py
 ```
 
 ## Future Improvements
