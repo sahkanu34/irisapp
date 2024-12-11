@@ -1,4 +1,5 @@
-# Predictive Modeling Project 100% Accuracy
+# IRIS FLOWER PREDICTION 
+<img src ="iris.jpg">
 
 ## Project Overview
 This repository contains a machine learning project developed using Python, focusing on predictive modeling with Logistic Regression. The project achieved 100% accuracy, demonstrating the effectiveness of the implemented approach.
@@ -87,4 +88,4 @@ Specify your license here (e.g., MIT License)
 
 ## Contact
 Suraj Sah Kanu - surajsah132@gmail.com
-Project Link: [https://github.com/sahkanu34/irisapp]
+Project Link: [https://irisapp-8rysylun8wgisfsk7ksxgs.streamlit.app/]
