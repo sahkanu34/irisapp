@@ -13,17 +13,12 @@ if os.path.exists(file_path):
 else:
     print(f"File not found at {file_path}. Please check the path and try again.")
 
-st.image("iris.jpg")
-
-    ## Loading  the datasets
-df=pd.read_csv("Iris.csv")
-df.sample(5)
-st.write(df.sample(5))
+st.image("iris.jpg" ,width=300)
 
 def main():
 # Streamlit app
 
-    st.title("Iris Flower Classification")
+    st.header("Iris Flower Classification")
 
    
 # Input features
