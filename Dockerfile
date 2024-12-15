@@ -11,7 +11,7 @@ COPY . /app
 RUN pip install numpy pandas streamlit scikit-learn matplotlib seaborn
 
 # Make port 8501 available to the world outside this container
-EXPOSE 8501
+EXPOSE 8501:8501
 
 # Define environment variable to ensure output is sent to terminal
 ENV PYTHONUNBUFFERED=1
