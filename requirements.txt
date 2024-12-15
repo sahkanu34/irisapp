@@ -2,7 +2,7 @@ python
 streamlit
 pandas
 numpy
-sklearn
+scikit-learn
 matplotlib
 seaborn
 jupyternotebook
