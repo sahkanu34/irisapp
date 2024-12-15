@@ -1,8 +1,6 @@
 # IRIS FLOWER PREDICTION 
 <img src ="iris.jpg">
 
-
-
 ## Project Overview
 <img src ="image.png">
 This repository contains a machine learning project developed using Python, focusing on predictive modeling with Logistic Regression. The project achieved 100% accuracy, demonstrating the effectiveness of the implemented approach.
@@ -75,6 +73,30 @@ Open the Jupyter Notebooks to explore data analysis and model development:
 Launch the interactive web app:
 ```bash
 streamlit run streamlit_ap.py
+```
+
+### Dockerfile for IRIS Flower Prediction Project
+```bash
+# Use an official Python runtime as a parent image
+FROM python:3.9-slim
+
+# Set the working directory in the container
+WORKDIR /app
+
+# Copy the current directory contents into the container at /app
+COPY . /app
+
+# Install any needed packages specified in requirements.txt
+RUN pip install numpy pandas streamlit scikit-learn matplotlib seaborn
+
+# Make port 8501 available to the world outside this container
+EXPOSE 8501
+
+# Define environment variable to ensure output is sent to terminal
+ENV PYTHONUNBUFFERED=1
+
+# Run streamlit when the container launches
+CMD ["streamlit", "run", "streamlit_app.py"]
 ```
 
 ## Future Improvements
