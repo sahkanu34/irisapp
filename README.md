@@ -77,33 +77,26 @@ streamlit run streamlit_ap.py
 
 ### Dockerfile for IRIS Flower Prediction Project
 ```bash
-# Base image
-FROM python:3.8-slim
+# Use an official Python runtime as a parent image
+FROM python:3.9-slim
 
-# Set environment variables
-ENV PYTHONDONTWRITEBYTECODE=1 \
-    PYTHONUNBUFFERED=1
-
-# Set working directory
+# Set the working directory in the container
 WORKDIR /app
 
-# Copy project files
+# Copy the current directory contents into the container at /app
 COPY . /app
 
-# Install system dependencies
-RUN apt-get update && \
-    apt-get install -y --no-install-recommends gcc && \
-    apt-get clean && rm -rf /var/lib/apt/lists/*
+# Install any needed packages specified in requirements.txt
+RUN pip install numpy pandas streamlit scikit-learn matplotlib seaborn
 
-# Install Python dependencies
-RUN pip install --upgrade pip && \
-    pip install -r requirements.txt
-
-# Expose the Streamlit port
+# Make port 8501 available to the world outside this container
 EXPOSE 8501
 
-# Command to run the application
-CMD ["streamlit", "run", "app.py"]
+# Define environment variable to ensure output is sent to terminal
+ENV PYTHONUNBUFFERED=1
+
+# Run streamlit when the container launches
+CMD ["streamlit", "run", "streamlit_app.py"]
 ```
 
 ## Future Improvements
