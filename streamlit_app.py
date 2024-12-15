@@ -13,12 +13,13 @@ if os.path.exists(file_path):
 else:
     print(f"File not found at {file_path}. Please check the path and try again.")
 
-st.image("iris.jpg" ,width=500)
+st.image("iris.jpg" ,width=300)
+
 
 def main():
 # Streamlit app
 
-    st.header("Iris Flower Classification")
+    st.title("Iris Flower Classification")
 
    
 # Input features
